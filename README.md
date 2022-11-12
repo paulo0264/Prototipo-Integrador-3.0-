@@ -5,7 +5,7 @@
 # Instruções rápidas
 ```
 $ git clone https://github.com/login-social
-$ cd login-social
+$ cd Prototipo-Integrador-3.0-
 $ yarn install
 $ yarn dev
 ```
