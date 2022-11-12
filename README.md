@@ -1,3 +1,7 @@
+# Pagina Finalizada!
+![projectSC](https://user-images.githubusercontent.com/60524381/201488843-3ef059d6-9c0b-4bf8-9e26-8793791d2e6f.jpg)
+
+
 # Instruções rápidas
 ```
 $ git clone https://github.com/login-social
