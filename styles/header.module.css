@@ -1,0 +1,20 @@
+.container nav {
+  max-width: 50rem;
+  margin: 0 auto 40px;
+  padding: 1.rem;
+  border-bottom: 1px solid #f0f0f0;
+  
+}
+.container ul {
+  display: flex;
+  list-style: none;
+}
+.container li {
+  margin-right: 1.5rem;
+  line-height: 38px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.container li:first-child {
+  margin-left: auto;
+}

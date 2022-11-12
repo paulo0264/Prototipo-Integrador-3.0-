@@ -1,0 +1,17 @@
+.container {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    color: #000;
+}
+
+.footer span {
+    font-weight: bold;
+}
