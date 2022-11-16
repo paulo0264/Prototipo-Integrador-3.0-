@@ -8,9 +8,10 @@
 .socialbtn {
     cursor: pointer;
     border-radius: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border: 1px solid #8a8a8a;
     padding: 9px 24px 9px 35px;
+    font-weight: bold;
     width: 80%;
     background-color: #fff;
     background-size: 20px;

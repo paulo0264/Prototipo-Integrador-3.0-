@@ -1,18 +1,22 @@
 import '../styles/globals.css'
-
+// import { magic } from '../lib/magic';
 import { useState, useEffect } from 'react';
-import { UserContext } from '../lib/UserContext';
+// import { UserContext } from '../lib/UserContext';
 import Router from 'next/router';
-import Layout from '../components/layout';
+import { AppProps } from 'next/app'
+import { SessionProvider } from "next-auth/react"
+import Layout from '../components/layout'
 
-export default function App({ Component, pageProps }) {
-  const [user, setUser] = useState();
 
-  useEffect(() => {
-    setUser({ loading: true });
-    Router.push('/login');
+
+
+  // const [user, setUser] = useState();
+
+  // useEffect(() => {
+  //   setUser({ loading: true });
+  //   Router.push('/login');
     
-  }, []);
+  // }, []);
   
 
     // Se isLoggedIn for true, defina o UserContext com os dados do usuário
@@ -31,11 +35,23 @@ export default function App({ Component, pageProps }) {
   // }, []);
 
 
+// export default function MyApp({ Component, pageProps }) {
+//   return (
+//     <Provider session={pageProps.session}>
+//       <Layout>
+//       <Component {...pageProps} />
+//       </Layout>
+//     </Provider>
+//   )
+// }
+
+export default function MyApp({ Component, pageProps: { session, ... pageProps } }) {
   return (
-      <UserContext.Provider value={[user, setUser]}>
+      <SessionProvider session={session}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </UserContext.Provider>
-  );
+      </SessionProvider>
+)
 }
+

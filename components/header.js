@@ -1,19 +1,19 @@
 import { useContext } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
-import { UserContext } from '../lib/UserContext';
+// import { UserContext } from '../lib/UserContext';
 
 import styles from '../styles/header.module.css'
 
 const Header = () => {
-  const [user, setUser] = useContext(UserContext);
+  // const [user, setUser] = useContext(UserContext);
 
-  const logout = () => {
-    // magic.user.logout().then(() => {
-      setUser({ user: null });
-      Router.push('/login');
-    // });
-  };
+  // const logout = () => {
+  //   // magic.user.logout().then(() => {
+  //     setUser({ user: null });
+  //     Router.push('/login');
+  //   // });
+  // };
 
   return (
     <header className={styles.container}>

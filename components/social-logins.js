@@ -1,34 +1,47 @@
 import { useState } from 'react';
-
+import { signIn } from 'next-auth/react';
 import styles from '../styles/social-logins.module.css'
 
-const SocialLogins = ({ onSubmit }) => {
-  const providers = ['Linkedin','google', 'facebook', 'github'];
-  const [isRedirecting, setIsRedirecting] = useState(false);
+const SocialLogins = () => {
+  // const providers = ['Linkedin','google', 'facebook', 'github'];
+
 
   return (
     <>
       <div className={styles.container}></div>
-      {providers.map((provider) => {
-        return (
-          <div key={provider}>
+  
+          <div>
             <button
               type='submit'
               className={styles.socialbtn}
-              onClick={() => {
-                setIsRedirecting(true);
-                onSubmit(provider);
-              }}
-              key={provider}
-              style={{ backgroundImage: `url(${provider}.png)` }}
+              onClick={() => signIn('github')}
             >
-              {/* turns "google" to "Google" */}
-              {provider.replace(/^\w/, (c) => c.toUpperCase())}
+              Github
             </button>
+            {/* <button
+              type='submit'
+              className={styles.socialbtn}
+              onClick={() => signIn('google')}
+            >
+              Google
+            </button>
+            <button
+              type='submit'
+              className={styles.socialbtn}
+              onClick={() => signIn('Linkedin')}
+            >
+              Linkedin
+            </button>
+            <button
+              type='submit'
+              className={styles.socialbtn}
+              onClick={() => signIn('Facebook')}
+            >
+              Facebook
+            </button> */}
           </div>
-        );
-      })}
-      {isRedirecting && <div className={styles.redirecting}>Redirecting...</div>}
+      
+      {/* {isRedirecting && <div className={styles.redirecting}>Redirecting...</div>} */}
       
     </>
   );
