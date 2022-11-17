@@ -1,28 +1,19 @@
 import React from "react"
 import { signOut, useSession, getSession } from "next-auth/react"
+import { loading } from "../../components/loading"
 
 
 export default function Home() {
   const {data: session} = useSession();
 
-  // if (loading) {
-  //   return <p>Loading...</p>
-  // }
+  if (loading) {
+    return <p>Loading...</p>
+  }
 
   return (
     <>
-      {/* {session ? ( */}
-        {/* <> */}
-          <p>Seja Bém Vindo (ª)</p>
-          
-        <button onClick={() => signOut()}>Sair</button>
-        {/* </>
-      ) : (
-        <p>
-          <p>Você não tem permissão para ver esta página.</p>
-          <button>Logar</button>
-        </p>
-      )} */}
+      <p>Seja Bém Vindo (ª)</p>
+      <button onClick={() => signOut()}>Sair</button>
     </>
   )
 }

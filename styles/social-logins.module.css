@@ -6,11 +6,15 @@
     font-weight: bold;
 }
 .socialbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border-radius: 50px;
     margin-bottom: 5px;
+    margin-left: 27px;
     border: 1px solid #8a8a8a;
-    padding: 9px 24px 9px 35px;
+    padding: 5px 24px 5px 30px;
     font-weight: bold;
     width: 80%;
     background-color: #fff;
@@ -20,6 +24,10 @@
 }
 .socialbtn:hover {
     background-color: #f0f0f0;
+}
+.socialbtn img {
+    width: 20px;
+    margin: 2px;
 }
 .redirecting {
     color: gray;
